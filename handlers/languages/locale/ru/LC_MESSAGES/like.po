@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-08-01 15:02+0300\n"
+"PO-Revision-Date: 2022-08-01 15:03+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: forms\auth_by_password_form.py:40
+msgid "Authorization by password"
+msgstr "Авторизация по паролю"
+
+#: forms\auth_by_password_form.py:57
+msgid "Login"
+msgstr "Логин"
+
+#: forms\auth_by_password_form.py:71
+msgid "Password"
+msgstr "Пароль"
+
+#: forms\auth_by_password_form.py:93 forms\auth_by_token_form.py:74
+msgid "Enter"
+msgstr "Войти"
+
+#: forms\auth_by_password_form.py:108 forms\auth_by_token_form.py:84
+#: forms\main_form.py:259 forms\main_form.py:273
+msgid "Authorization successful"
+msgstr "Авторизация прошла успешно"
+
+#: forms\auth_by_password_form.py:109
+msgid ""
+"You have successfully logged in using the login and password you entered"
+msgstr "Вы успешно вошли в систему, используя введенные логин и пароль"
+
+#: forms\auth_by_password_form.py:117 forms\auth_by_token_form.py:90
+msgid "Authorization failed"
+msgstr "Авторизация не удалась"
+
+#: forms\auth_by_password_form.py:118
+msgid "Check the entered data or try to log in with an access token"
+msgstr ""
+"Проверьте введенные данные или попробуйте войти в систему с помощью access "
+"токена"
+
+#: forms\auth_by_token_form.py:44
+msgid "Authorization by access token"
+msgstr "Аутентификация по access токену"
+
+#: forms\auth_by_token_form.py:48
+msgid ""
+"Go to the site, allow access,\n"
+"after redirecting to another page,\n"
+"enter the URL in the field"
+msgstr ""
+"Перейдите на сайт, разрешите доступ,\n"
+"после перенаправления на другую страницу\n"
+"введите URL-адрес в поле"
+
+#: forms\auth_by_token_form.py:59
+msgid "Go to the website"
+msgstr "Перейдите на веб-сайт"
+
+#: forms\auth_by_token_form.py:85
+msgid "You have successfully logged in using the entered url"
+msgstr "Вы успешно вошли в систему, используя введенный URL-адрес"
+
+#: forms\captcha_form.py:39
+msgid "Captcha from the image"
+msgstr "Капча с изображения"
+
+#: forms\captcha_form.py:43
+msgid "Loading an image..."
+msgstr "Загрузка изображения"
+
+#: forms\captcha_form.py:52
+msgid "Enter the text"
+msgstr "Введите текст"
+
+#: forms\main_form.py:38 forms\main_form.py:161
+msgid "Like photos in VK albums"
+msgstr "Лайкать фотографии в альбомах VK"
+
+#: forms\main_form.py:64 forms\main_form.py:123 forms\main_form.py:137
+msgid "Auth by password"
+msgstr "Авторизация по паролю"
+
+#: forms\main_form.py:67 forms\main_form.py:124 forms\main_form.py:138
+msgid "Auth by access token"
+msgstr "Аутентификация по access токену"
+
+#: forms\main_form.py:70 forms\main_form.py:125 forms\main_form.py:139
+msgid "Delete a saved access token"
+msgstr "Удалить сохраненный access токен"
+
+#: forms\main_form.py:73 forms\main_form.py:121 forms\main_form.py:132
+#: forms\main_form.py:225 forms\main_form.py:254 forms\main_form.py:268
+msgid "Auth"
+msgstr "Авторизация"
+
+#: forms\main_form.py:74 forms\main_form.py:121 forms\main_form.py:132
+msgid "Language"
+msgstr "Язык"
+
+#: forms\main_form.py:83 forms\main_form.py:165
+msgid "Owners albums"
+msgstr "Владельцы альбомов"
+
+#: forms\main_form.py:84 forms\main_form.py:166
+msgid "Show albums"
+msgstr "Показать альбомы"
+
+#: forms\main_form.py:86 forms\main_form.py:167
+msgid "Albums"
+msgstr "Альбомы"
+
+#: forms\main_form.py:87 forms\main_form.py:168
+msgid "Put likes"
+msgstr "Поставить лайки"
+
+#: forms\main_form.py:88 forms\main_form.py:169
+msgid "Remove likes"
+msgstr "Убрать лайки"
+
+#: forms\main_form.py:188 forms\main_form.py:234
+msgid "The data was not received successfully"
+msgstr "Данные не были получены успешно"
+
+#: forms\main_form.py:216
+msgid "Count photo"
+msgstr "Количество фотографий"
+
+#: forms\main_form.py:241
+msgid "Select one user"
+msgstr "Выберите одного пользователя"
+
+#: forms\main_form.py:241
+msgid "The owner of the albums is not selected"
+msgstr "Владелец альбомов не выбран"
+
+#: forms\main_form.py:250
+msgid "Albums not received"
+msgstr "Неполученные альбомы"
+
+#: forms\main_form.py:260 forms\main_form.py:274
+msgid "You have successfully logged in using the saved token"
+msgstr "Вы успешно вошли в систему, используя сохраненный токен"
+
+#: forms\main_form.py:283
+msgid "Token successfully deleted"
+msgstr "Токен успешно удален"
+
+#: forms\main_form.py:283
+msgid "You can log in again"
+msgstr "Вы можете снова авторизоваться"
+
+#: forms\main_form.py:290 forms\main_form.py:317
+msgid "Albums is not selected"
+msgstr "Альбомы не выбраны"
+
+#: forms\main_form.py:290 forms\main_form.py:317
+msgid "Select one album"
+msgstr "Выберите один альбом"
+
+#: forms\main_form.py:301 forms\main_form.py:328
+msgid "Operation canceled successfully"
+msgstr "Операция успешно отменена"
+
+#: forms\main_form.py:301 forms\main_form.py:328 forms\main_form.py:351
+msgid "Cancel"
+msgstr "Отмена"
+
+#: forms\main_form.py:305
+msgid "Likes have been successfully putted"
+msgstr "Лайки были успешно поставлены"
+
+#: forms\main_form.py:306
+msgid "All photos of the album are liked"
+msgstr "Все фотографии из альбома оценены"
+
+#: forms\main_form.py:309 forms\main_form.py:336
+msgid "Photos not received"
+msgstr "Фотографии не получены"
+
+#: forms\main_form.py:332
+msgid "Likes have been successfully removed"
+msgstr "Лайки были успешно удалены"
+
+#: forms\main_form.py:333
+msgid "All likes are removed from photos from the album"
+msgstr "Все лайки удалены с фотографий из альбома"
+
+#: forms\main_form.py:356
+msgid "Likes removed"
+msgstr "Лайков убрано"
+
+#: forms\main_form.py:363
+msgid "Likes putted"
+msgstr "Лайков поставлено"
+
+#: handlers\auth\auth_handler.py:43
+msgid "The username or password is not correct"
+msgstr "Имя пользователя или пароль неверны"
+
+#: handlers\auth\auth_handler.py:69
+msgid "Token is not valid"
+msgstr "Токен недействителен"
+
+#: handlers\auth\auth_handler.py:95
+msgid "Query parameters are set incorrectly"
+msgstr "Неправильно заданы параметры запроса"
+
+#: handlers\auth\auth_handler.py:97
+msgid "Couldn't find access token"
+msgstr "Не удалось найти access токен"
+
+#: handlers\download\download_handler.py:24
+msgid "HTTP error"
+msgstr "Ошибка HTTP"
+
+#: handlers\download\download_handler.py:28
+msgid "Timeout error"
+msgstr "Ошибка времени ожидания"
+
+#: handlers\photo\photo_handler.py:31
+msgid "The albums of the selected user could not be received"
+msgstr "Альбомы выбранного пользователя не могут быть получены"
+
+#: handlers\photo\photo_handler.py:62
+msgid "Couldn't get photos of the selected album"
+msgstr "Не удалось получить фотографии из выбранного альбома"
+
+#: handlers\user\user_handler.py:28
+msgid "Could not get the data of the current user"
+msgstr "Не удалось получить данные текущего пользователя"
+
+#: handlers\user\user_handler.py:50
+msgid "Couldn't get the friends data of the current user"
+msgstr "Не удалось получить данные о друзьях текущего пользователя"
+
+#~ msgid "Album owners have not been received"
+#~ msgstr "Владельцы альбомов не были получены"
