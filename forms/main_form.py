@@ -179,9 +179,8 @@ class MainForm:
                 self.__display_albums(
                     self.__main_handler.get_albums(self.__last_select_owner)
                 )
-        except NoAuthException:
-            pass
         except (
+            NoAuthException,
             GetCurrentUserException,
             GetFriendsException,
             GetAlbumsException,
@@ -229,9 +228,10 @@ class MainForm:
         self.__button_put_likes.config(state="normal")
         self.__button_remove_likes.config(state="normal")
         try:
-            self.__display_info_current_user()
-            self.__display_owners_albums(self.__main_handler.get_owners_albums())
-            self.__clear_list_albums()
+            if self.__main_handler.check_api():
+                self.__display_info_current_user()
+                self.__display_owners_albums(self.__main_handler.get_owners_albums())
+                self.__clear_list_albums()
         except (NoAuthException, GetCurrentUserException, GetFriendsException) as e:
             messagebox.showinfo(_("The data was not received successfully"), f"{e}")
 
@@ -249,7 +249,7 @@ class MainForm:
                 self.__display_albums(
                     self.__main_handler.get_albums(self.__last_select_owner)
                 )
-            except GetAlbumsException as e:
+            except (NoAuthException, GetAlbumsException) as e:
                 messagebox.showinfo(_("Albums not received"), f"{e}")
         self.__button_show_albums.config(state="normal")
 
@@ -312,7 +312,7 @@ class MainForm:
                         _("Likes have been successfully putted"),
                         _("All photos of the album are liked"),
                     )
-            except GetPhotosException as e:
+            except (NoAuthException, GetPhotosException) as e:
                 messagebox.showinfo(_("Photos not received"), f"{e}")
         self.finish_liking()
 
@@ -340,7 +340,7 @@ class MainForm:
                         _("Likes have been successfully removed"),
                         _("All likes are removed from photos from the album"),
                     )
-            except GetPhotosException as e:
+            except (NoAuthException, GetPhotosException) as e:
                 messagebox.showinfo(_("Photos not received"), f"{e}")
         self.finish_liking()
 

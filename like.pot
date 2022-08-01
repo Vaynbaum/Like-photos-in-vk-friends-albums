@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-08-01 15:02+0300\n"
+"POT-Creation-Date: 2022-08-01 22:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid "Enter"
 msgstr ""
 
 #: forms\auth_by_password_form.py:108 forms\auth_by_token_form.py:84
-#: forms\main_form.py:259 forms\main_form.py:273
+#: forms\main_form.py:263 forms\main_form.py:278
 msgid "Authorization successful"
 msgstr ""
 
@@ -79,124 +79,124 @@ msgstr ""
 msgid "Enter the text"
 msgstr ""
 
-#: forms\main_form.py:38 forms\main_form.py:161
+#: forms\main_form.py:39 forms\main_form.py:162
 msgid "Like photos in VK albums"
 msgstr ""
 
-#: forms\main_form.py:64 forms\main_form.py:123 forms\main_form.py:137
+#: forms\main_form.py:65 forms\main_form.py:124 forms\main_form.py:138
 msgid "Auth by password"
 msgstr ""
 
-#: forms\main_form.py:67 forms\main_form.py:124 forms\main_form.py:138
+#: forms\main_form.py:68 forms\main_form.py:125 forms\main_form.py:139
 msgid "Auth by access token"
 msgstr ""
 
-#: forms\main_form.py:70 forms\main_form.py:125 forms\main_form.py:139
+#: forms\main_form.py:71 forms\main_form.py:126 forms\main_form.py:140
 msgid "Delete a saved access token"
 msgstr ""
 
-#: forms\main_form.py:73 forms\main_form.py:121 forms\main_form.py:132
-#: forms\main_form.py:225 forms\main_form.py:254 forms\main_form.py:268
+#: forms\main_form.py:74 forms\main_form.py:122 forms\main_form.py:133
+#: forms\main_form.py:227 forms\main_form.py:258 forms\main_form.py:273
 msgid "Auth"
 msgstr ""
 
-#: forms\main_form.py:74 forms\main_form.py:121 forms\main_form.py:132
+#: forms\main_form.py:75 forms\main_form.py:122 forms\main_form.py:133
 msgid "Language"
 msgstr ""
 
-#: forms\main_form.py:83 forms\main_form.py:165
+#: forms\main_form.py:84 forms\main_form.py:166
 msgid "Owners albums"
 msgstr ""
 
-#: forms\main_form.py:84 forms\main_form.py:166
+#: forms\main_form.py:85 forms\main_form.py:167
 msgid "Show albums"
 msgstr ""
 
-#: forms\main_form.py:86 forms\main_form.py:167
+#: forms\main_form.py:87 forms\main_form.py:168
 msgid "Albums"
 msgstr ""
 
-#: forms\main_form.py:87 forms\main_form.py:168
+#: forms\main_form.py:88 forms\main_form.py:169
 msgid "Put likes"
 msgstr ""
 
-#: forms\main_form.py:88 forms\main_form.py:169
+#: forms\main_form.py:89 forms\main_form.py:170
 msgid "Remove likes"
 msgstr ""
 
-#: forms\main_form.py:188 forms\main_form.py:234
+#: forms\main_form.py:189 forms\main_form.py:236
 msgid "The data was not received successfully"
 msgstr ""
 
-#: forms\main_form.py:216
+#: forms\main_form.py:217
 msgid "Count photo"
 msgstr ""
 
-#: forms\main_form.py:241
+#: forms\main_form.py:244
 msgid "Select one user"
 msgstr ""
 
-#: forms\main_form.py:241
+#: forms\main_form.py:244
 msgid "The owner of the albums is not selected"
 msgstr ""
 
-#: forms\main_form.py:250
+#: forms\main_form.py:253
 msgid "Albums not received"
 msgstr ""
 
-#: forms\main_form.py:260 forms\main_form.py:274
+#: forms\main_form.py:264 forms\main_form.py:279
 msgid "You have successfully logged in using the saved token"
 msgstr ""
 
-#: forms\main_form.py:283
+#: forms\main_form.py:289
 msgid "Token successfully deleted"
 msgstr ""
 
-#: forms\main_form.py:283
+#: forms\main_form.py:289
 msgid "You can log in again"
 msgstr ""
 
-#: forms\main_form.py:290 forms\main_form.py:317
+#: forms\main_form.py:297 forms\main_form.py:325
 msgid "Albums is not selected"
 msgstr ""
 
-#: forms\main_form.py:290 forms\main_form.py:317
+#: forms\main_form.py:297 forms\main_form.py:325
 msgid "Select one album"
 msgstr ""
 
-#: forms\main_form.py:301 forms\main_form.py:328
+#: forms\main_form.py:308 forms\main_form.py:336
 msgid "Operation canceled successfully"
 msgstr ""
 
-#: forms\main_form.py:301 forms\main_form.py:328 forms\main_form.py:351
+#: forms\main_form.py:308 forms\main_form.py:336 forms\main_form.py:362
 msgid "Cancel"
 msgstr ""
 
-#: forms\main_form.py:305
+#: forms\main_form.py:312
 msgid "Likes have been successfully putted"
 msgstr ""
 
-#: forms\main_form.py:306
+#: forms\main_form.py:313
 msgid "All photos of the album are liked"
 msgstr ""
 
-#: forms\main_form.py:309 forms\main_form.py:336
+#: forms\main_form.py:316 forms\main_form.py:344
 msgid "Photos not received"
 msgstr ""
 
-#: forms\main_form.py:332
+#: forms\main_form.py:340
 msgid "Likes have been successfully removed"
 msgstr ""
 
-#: forms\main_form.py:333
+#: forms\main_form.py:341
 msgid "All likes are removed from photos from the album"
 msgstr ""
 
-#: forms\main_form.py:356
+#: forms\main_form.py:375
 msgid "Likes removed"
 msgstr ""
 
-#: forms\main_form.py:363
+#: forms\main_form.py:388
 msgid "Likes putted"
 msgstr ""
 
@@ -222,6 +222,12 @@ msgstr ""
 
 #: handlers\download\download_handler.py:28
 msgid "Timeout error"
+msgstr ""
+
+#: handlers\main\main_handler.py:124 handlers\main\main_handler.py:144
+#: handlers\main\main_handler.py:170 handlers\main\main_handler.py:198
+#: handlers\main\main_handler.py:221 handlers\main\main_handler.py:246
+msgid "No API"
 msgstr ""
 
 #: handlers\photo\photo_handler.py:31

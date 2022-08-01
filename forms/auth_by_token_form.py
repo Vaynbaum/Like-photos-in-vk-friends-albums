@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 
 
-from handlers.auth.exceptions.auth_password_exceptoin import AuthPasswordException
+from handlers.auth.exceptions.auth_token_exception import AuthTokenException
 from handlers.auth.exceptions.parse_url_exception import ParseURLException
 from handlers.main.main_handler import MainHandler
 
@@ -86,5 +86,5 @@ class AuthTokenForm:
             )
             sleep(0.25)
             self.__root.destroy()
-        except (AuthPasswordException, ParseURLException) as e:
+        except (AuthTokenException, ParseURLException) as e:
             messagebox.showinfo(_("Authorization failed"), e)

@@ -120,8 +120,8 @@ class MainHandler:
         Returns:
             User: The data of the current authorized user
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         lang = self.__language_handler.get_current_language_abbreviation()
         try:
             self.__current_user = self.__user_handler.get_current_user(self.__api, lang)
@@ -140,8 +140,8 @@ class MainHandler:
         Returns:
             list[User]: Data of friends of the current authorized user
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         lang = self.__language_handler.get_current_language_abbreviation()
         try:
             self.__owners_albums = self.__user_handler.get_friends(
@@ -166,8 +166,8 @@ class MainHandler:
         Returns:
             list[Album]: List of user's album
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         user = self.__owners_albums[ind]
         lang = self.__language_handler.get_current_language_abbreviation()
         try:
@@ -179,6 +179,7 @@ class MainHandler:
     def delete_saved_access_token(self) -> None:
         """Deleting a saved token from a file"""
         self.__auth_handler.delete_saved_access_token()
+        self.__api = None
 
     def __get_photos(self, ind_album: int, like: bool) -> list[Photo]:
         """Getting album photos data
@@ -194,8 +195,8 @@ class MainHandler:
         Returns:
             list[Photo]: List of album photos
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         album = self.__albums[ind_album]
         try:
             return self.__photo_handler.get_photos(self.__api, album, like)
@@ -217,8 +218,8 @@ class MainHandler:
             NoAuthException: If the user is not logged in yet
             GetPhotosException: If it was't possible to get photos from the selected album
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         try:
             photos = self.__get_photos(ind_album, True)
             self.__like_handler.put_likes(
@@ -242,8 +243,8 @@ class MainHandler:
             NoAuthException: If the user is not logged in yet
             GetPhotosException: If it was't possible to get photos from the selected album
         """
-        if self.__api is None:
-            raise NoAuthException("No API")
+        if not self.check_api():
+            raise NoAuthException(_("No API"))
         try:
             photos = self.__get_photos(ind_album, False)
             self.__like_handler.remove_likes(
@@ -268,3 +269,11 @@ class MainHandler:
             return self.__download_handler.load_image(url)
         except DownloadImageException as e:
             raise DownloadImageException(f"{e}")
+
+    def check_api(self) -> bool:
+        """Checks for an api with an authorized session
+
+        Returns:
+            bool: True if there is an api and False otherwise
+        """
+        return self.__api is not None
