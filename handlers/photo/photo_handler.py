@@ -22,7 +22,7 @@ class PhotoHandler:
 
         Returns:
             list[Album]: List of user's albums
-        """        
+        """
         try:
             albums = api.photos.getAlbums(owner_id=owner.id, need_system=1, lang=lang)
             return [Album.of(album) for album in albums["items"]]
@@ -31,7 +31,9 @@ class PhotoHandler:
                 _("The albums of the selected user could not be received")
             )
 
-    def get_photos(self, api: vk.API, album: Album, like)-> list[Photo]:
+    def get_photos(
+        self, api: vk.API, album: Album, like: bool, offset: int, cnt: int
+    ) -> list[Photo]:
         """Getting album photos data
 
         Args:
@@ -44,13 +46,14 @@ class PhotoHandler:
 
         Returns:
             list[Photo]: List of album photos
-        """        
+        """
         try:
             photos = api.photos.get(
                 owner_id=album.owner_id,
                 album_id=album.id,
                 extended="1",
-                count=album.size + 1,
+                count=cnt,
+                offset=offset
             )
 
             return [

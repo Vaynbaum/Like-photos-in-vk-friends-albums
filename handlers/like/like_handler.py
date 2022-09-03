@@ -95,6 +95,8 @@ class LikeHandler:
         event: Event,
         display_progress,
         display_captcha,
+        part: int,
+        all_part: int,
     ) -> None:
         """Put likes on photos
 
@@ -112,13 +114,13 @@ class LikeHandler:
             try:
                 res = self.__query_like(api, photos[ind_photo], display_captcha)
                 if res["likes"] > -1:
-                    display_progress(ind_photo + 1, count_photos)
+                    display_progress(ind_photo + 1, count_photos, part, all_part)
                 sleep(self.__calc_sleep(arg_sin_offset_sleep))
             except VkAPIError:
                 sleep(4)
                 res = self.__query_like(api, photos[ind_photo], display_captcha)
                 if res["likes"] > -1:
-                    display_progress(ind_photo + 1, count_photos)
+                    display_progress(ind_photo + 1, count_photos, part, all_part)
             ind_photo += 1
 
     def remove_likes(
@@ -128,6 +130,8 @@ class LikeHandler:
         event: Event,
         display_progress,
         display_captcha,
+        part: int,
+        all_part: int,
     ):
         """Remove likes from photos
 
@@ -145,12 +149,12 @@ class LikeHandler:
             try:
                 res = self.__query_no_like(api, photos[ind_photo], display_captcha)
                 if res["likes"] > -1:
-                    display_progress(ind_photo + 1, count_photos)
+                    display_progress(ind_photo + 1, count_photos, part, all_part)
                 sleep(self.__calc_sleep(arg_sin_offset_sleep))
 
             except VkAPIError:
                 sleep(4)
                 res = self.__query_no_like(api, photos[ind_photo], display_captcha)
                 if res["likes"] > -1:
-                    display_progress(ind_photo + 1, count_photos)
+                    display_progress(ind_photo + 1, count_photos, part, all_part)
             ind_photo += 1

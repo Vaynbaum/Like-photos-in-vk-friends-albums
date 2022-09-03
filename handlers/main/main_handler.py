@@ -1,3 +1,4 @@
+import math
 from threading import Event
 import vk
 from PIL import Image
@@ -31,6 +32,7 @@ class MainHandler:
         self.__api = None
         self.__current_user = None
         self.__owners_albums = None
+        self.__cnt_get_photo = 500
 
         self.__language_handler = LanguageHandler([russian_language, english_language])
         self.__auth_handler = AuthHandler()
@@ -181,7 +183,9 @@ class MainHandler:
         self.__auth_handler.delete_saved_access_token()
         self.__api = None
 
-    def __get_photos(self, ind_album: int, like: bool) -> list[Photo]:
+    def __get_photos(
+        self, like: bool, offset: int, cnt: int, album: Album
+    ) -> list[Photo]:
         """Getting album photos data
 
         Args:
@@ -197,9 +201,10 @@ class MainHandler:
         """
         if not self.check_api():
             raise NoAuthException(_("No API"))
-        album = self.__albums[ind_album]
         try:
-            return self.__photo_handler.get_photos(self.__api, album, like)
+            return self.__photo_handler.get_photos(
+                self.__api, album, like, offset, cnt + 1
+            )
         except GetPhotosException as e:
             raise GetPhotosException(f"{e}")
 
@@ -220,11 +225,22 @@ class MainHandler:
         """
         if not self.check_api():
             raise NoAuthException(_("No API"))
+        album = self.__albums[ind_album]
+        cnt = 0
+        all_part = math.ceil((album.size / self.__cnt_get_photo))
         try:
-            photos = self.__get_photos(ind_album, True)
-            self.__like_handler.put_likes(
-                self.__api, photos, event, display_progress, display_captcha
-            )
+             for part in range(1, all_part + 1):
+                cnt += self.__cnt_get_photo
+                photos = self.__get_photos(True, cnt - self.__cnt_get_photo, cnt, album)
+                self.__like_handler.put_likes(
+                    self.__api,
+                    photos,
+                    event,
+                    display_progress,
+                    display_captcha,
+                    part,
+                    all_part,
+                )
         except GetPhotosException as e:
             raise GetPhotosException(f"{e}")
 
@@ -245,11 +261,22 @@ class MainHandler:
         """
         if not self.check_api():
             raise NoAuthException(_("No API"))
+        album = self.__albums[ind_album]
+        cnt = 0
+        all_part = math.ceil((album.size / self.__cnt_get_photo))
         try:
-            photos = self.__get_photos(ind_album, False)
-            self.__like_handler.remove_likes(
-                self.__api, photos, event, display_progress, display_captcha
-            )
+            for part in range(1, all_part + 1):
+                cnt += self.__cnt_get_photo
+                photos = self.__get_photos(True, cnt - self.__cnt_get_photo, cnt, album)
+                self.__like_handler.remove_likes(
+                    self.__api,
+                    photos,
+                    event,
+                    display_progress,
+                    display_captcha,
+                    part,
+                    all_part,
+                )
         except GetPhotosException as e:
             raise GetPhotosException(f"{e}")
 

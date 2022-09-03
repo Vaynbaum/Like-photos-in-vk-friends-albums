@@ -300,7 +300,7 @@ class MainForm:
                 self.__main_handler.put_likes(
                     selection[0],
                     self.__event_cancel_liking,
-                    self.__display_progress_put_likes,
+                    self.__display_progress,
                     self.__display_captcha,
                 )
                 if self.__event_cancel_liking.is_set():
@@ -328,7 +328,7 @@ class MainForm:
                 self.__main_handler.remove_likes(
                     selection[0],
                     self.__event_cancel_liking,
-                    self.__display_progress_remove_likes,
+                    self.__display_progress,
                     self.__display_captcha,
                 )
                 if self.__event_cancel_liking.is_set():
@@ -363,32 +363,26 @@ class MainForm:
         )
         self.__cancel_liking_button.grid(row=3, column=4)
 
-    def __display_progress_remove_likes(
-        self, count_execute: int, count_all: int
+    def __display_progress(
+        self, count_execute: int, count_all: int, part: int, all_parts: int
     ) -> None:
-        """Displaying the progress of removing likes from photos on the form
+        """Displaying the progress of adding likes or removing likes  on the form
 
         Args:
             count_execute (int)
             count_all (int)
         """
-        begin_text = _("Likes removed")
-        Label(width=20, text=f"{begin_text}: {count_execute}/{count_all}").grid(
-            row=3, column=2
-        )
-        self.__root.update()
-
-    def __display_progress_put_likes(self, count_execute: int, count_all: int) -> None:
-        """Displaying the progress of adding likes on the form
-
-        Args:
-            count_execute (int)
-            count_all (int)
-        """
-        begin_text = _("Likes putted")
-        Label(width=20, text=f"{begin_text}: {count_execute}/{count_all}").grid(
-            row=3, column=2
-        )
+        begin_text = _("Progress")
+        part_text = _("parts")
+        count_text = _("count")
+        Label(
+            width=25,
+            text="{0}: {1}/{2} {3};".format(begin_text, part, all_parts, part_text),
+        ).grid(row=3, column=2)
+        Label(
+            width=25,
+            text="{0}/{1} {2}".format(count_execute, count_all, count_text),
+        ).grid(row=4, column=2)
         self.__root.update()
 
     def __display_captcha(self, captcha: Captcha, event: Event) -> None:

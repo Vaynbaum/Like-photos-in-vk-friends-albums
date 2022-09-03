@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-08-01 22:37+0300\n"
+"POT-Creation-Date: 2022-09-03 17:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,7 +96,7 @@ msgid "Delete a saved access token"
 msgstr ""
 
 #: forms\main_form.py:74 forms\main_form.py:122 forms\main_form.py:133
-#: forms\main_form.py:227 forms\main_form.py:258 forms\main_form.py:273
+#: forms\main_form.py:226 forms\main_form.py:258 forms\main_form.py:273
 msgid "Auth"
 msgstr ""
 
@@ -124,11 +124,11 @@ msgstr ""
 msgid "Remove likes"
 msgstr ""
 
-#: forms\main_form.py:189 forms\main_form.py:236
+#: forms\main_form.py:188 forms\main_form.py:236
 msgid "The data was not received successfully"
 msgstr ""
 
-#: forms\main_form.py:217
+#: forms\main_form.py:216
 msgid "Count photo"
 msgstr ""
 
@@ -193,11 +193,15 @@ msgid "All likes are removed from photos from the album"
 msgstr ""
 
 #: forms\main_form.py:375
-msgid "Likes removed"
+msgid "Progress"
 msgstr ""
 
-#: forms\main_form.py:388
-msgid "Likes putted"
+#: forms\main_form.py:376
+msgid "parts"
+msgstr ""
+
+#: forms\main_form.py:377
+msgid "count"
 msgstr ""
 
 #: handlers\auth\auth_handler.py:43
@@ -224,9 +228,9 @@ msgstr ""
 msgid "Timeout error"
 msgstr ""
 
-#: handlers\main\main_handler.py:124 handlers\main\main_handler.py:144
-#: handlers\main\main_handler.py:170 handlers\main\main_handler.py:198
-#: handlers\main\main_handler.py:221 handlers\main\main_handler.py:246
+#: handlers\main\main_handler.py:126 handlers\main\main_handler.py:146
+#: handlers\main\main_handler.py:172 handlers\main\main_handler.py:203
+#: handlers\main\main_handler.py:227 handlers\main\main_handler.py:263
 msgid "No API"
 msgstr ""
 
@@ -234,7 +238,7 @@ msgstr ""
 msgid "The albums of the selected user could not be received"
 msgstr ""
 
-#: handlers\photo\photo_handler.py:62
+#: handlers\photo\photo_handler.py:65
 msgid "Couldn't get photos of the selected album"
 msgstr ""
 
